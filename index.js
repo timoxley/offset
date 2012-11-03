@@ -1,4 +1,4 @@
-var support = require('')
+var support = require('dom-support')
 var rroot = /^(?:body|html)$/i;
 
 jQuery.fn.offset = function( options ) {
