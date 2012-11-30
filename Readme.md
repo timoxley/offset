@@ -6,7 +6,13 @@
 
     $ component install timoxley/dom-offset
 
-## Example
+## API
+
+### offset(el)
+
+Get offset of an element within its container.
+
+Example:
 
 ```js
 var offset = require('offset')
@@ -15,11 +21,6 @@ console.log(offset(target))
 // => {top: 69, left: 108}
 ```
 
-## API
-
-### offset(el)
-
-    Get offset of an element within its container.
 
 ## Credit
 
