@@ -1,6 +1,11 @@
 var support = require('dom-support')
 var contains = require('within-document')
 
+/**
+ * Get offset of an element within its container.
+ *
+ * @api public
+ */
 module.exports = function offset(el) {
 	var box = { top: 0, left: 0 }
   var doc = el && el.ownerDocument
