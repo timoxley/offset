@@ -21,6 +21,9 @@ console.log(offset(target))
 
     Get offset of an element within its container.
 
+## Credit
+
+Code adapted from jQuery.
 
 ## License
 
