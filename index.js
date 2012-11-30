@@ -1,59 +1,55 @@
 var support = require('dom-support')
-var rroot = /^(?:body|html)$/i;
+var contains = require('within-document')
 
-jQuery.fn.offset = function( options ) {
-	if ( arguments.length ) {
-		return options === undefined ?
-			this :
-			this.each(function( i ) {
-				jQuery.offset.setOffset( this, options, i );
-			});
+module.exports = function offset(el) {
+	var box = { top: 0, left: 0 }
+  var doc = el && el.ownerDocument
+
+	if (!doc) {
+    console.warn('no document!')
+		return
 	}
-
-	var docElem, body, win, clientTop, clientLeft, scrollTop, scrollLeft,
-		box = { top: 0, left: 0 },
-		elem = this[ 0 ],
-		doc = elem && elem.ownerDocument;
-
-	if ( !doc ) {
-		return;
-	}
-
-	if ( (body = doc.body) === elem ) {
-		return jQuery.offset.bodyOffset( elem );
-	}
-
-	docElem = doc.documentElement;
 
 	// Make sure it's not a disconnected DOM node
-	if ( !jQuery.contains( docElem, elem ) ) {
-		return box;
+	if (!contains(el)) {
+		return box
 	}
+
+  var body = doc.body
+	if (body === el) {
+		return bodyOffset(el)
+	}
+
+	var docEl = doc.documentElement
 
 	// If we don't have gBCR, just use 0,0 rather than error
 	// BlackBerry 5, iOS 3 (original iPhone)
-	if ( typeof elem.getBoundingClientRect !== "undefined" ) {
-		box = elem.getBoundingClientRect();
+	if ( typeof el.getBoundingClientRect !== "undefined" ) {
+		box = el.getBoundingClientRect()
 	}
-	win = getWindow( doc );
-	clientTop  = docElem.clientTop  || body.clientTop  || 0;
-	clientLeft = docElem.clientLeft || body.clientLeft || 0;
-	scrollTop  = win.pageYOffset || docElem.scrollTop;
-	scrollLeft = win.pageXOffset || docElem.scrollLeft;
+
+	var clientTop  = docEl.clientTop  || body.clientTop  || 0
+	var clientLeft = docEl.clientLeft || body.clientLeft || 0
+	var scrollTop  = window.pageYOffset || docEl.scrollTop
+	var scrollLeft = window.pageXOffset || docEl.scrollLeft
+
 	return {
 		top: box.top  + scrollTop  - clientTop,
 		left: box.left + scrollLeft - clientLeft
-	};
-};
+	}
+}
 
-function bodyOffset( body ) {
-	var top = body.offsetTop,
-		left = body.offsetLeft;
+function bodyOffset(body) {
+	var top = body.offsetTop
+	var left = body.offsetLeft
 
-	if ( support.doesNotIncludeMarginInBodyOffset ) {
-		top  += parseFloat( jQuery.css(body, "marginTop") ) || 0;
-		left += parseFloat( jQuery.css(body, "marginLeft") ) || 0;
+	if (support.doesNotIncludeMarginInBodyOffset) {
+		top  += parseFloat(body.style.marginTop || 0)
+		left += parseFloat(body.style.marginLeft || 0)
 	}
 
-	return { top: top, left: left };
+	return {
+    top: top,
+    left: left
+  }
 }

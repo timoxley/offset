@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../../build/build.css" >
+    <style>
+      body {
+
+      }
+      #wrap {
+        width: 600px;
+        height: 800px;
+        overflow: auto;
+      }
+
+      #content {
+        height: 3000px;
+        width: 3000px;
+      }
+
+      #target {
+        width: 30px;
+        height: 30px;
+        background: red;
+        margin: 100px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="content">
+        <div id="target"></div>
+    </div>
+  </div>
+  <script src="../../build/build.js"></script>
+  <script>
+    var offset = require('offset')
+    var target = document.getElementById('target')
+    var content = document.getElementById('content')
+    var wrap = document.getElementById('wrap')
+    wrap.onscroll = function() {
+      console.log(offset(target))
+    }
+  </script>
+  </body>
+</html>
