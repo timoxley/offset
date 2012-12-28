@@ -1,6 +1,6 @@
 # dom-offset
 
-  Get offset of a dom element within its container.
+  Get offset of a dom element within the viewport.
 
 ## Installation
 
@@ -10,7 +10,7 @@
 
 ### offset(el)
 
-Get offset of an element within its container.
+Get offset of an element within the viewport.
 
 Example:
 

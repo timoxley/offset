@@ -2,7 +2,7 @@ var support = require('dom-support')
 var contains = require('within-document')
 
 /**
- * Get offset of an element within its container.
+ * Get offset of an element within the viewport.
  *
  * @api public
  */
