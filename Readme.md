@@ -1,10 +1,10 @@
-# dom-offset
+# offset
 
   Get offset of a dom element within the viewport.
 
 ## Installation
 
-    $ component install timoxley/dom-offset
+    $ component install timoxley/offset
 
 ## API
 
