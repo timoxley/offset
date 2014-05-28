@@ -5,7 +5,7 @@
   "version": "0.0.3",
   "keywords": [],
   "dependencies": {
-    "timoxley/dom-support": "*",
+    "detects/dom-support": "*",
     "component/within-document": "*"
   },
   "development": {},
