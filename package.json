@@ -1,0 +1,19 @@
+{
+  "name": "timoxley-offset",
+  "description": "Get offset of a dom element.",
+  "version": "0.0.3",
+  "keywords": [],
+  "dependencies": {
+    "dom-support": "*",
+    "within-document": "*"
+  },
+  "component": {
+    "scripts": {
+      "offset/index.js": "index.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timoxley/offset.git"
+  }
+}
