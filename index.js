@@ -1,5 +1,5 @@
 var support = require('dom-support')
-var contains = require('within-document')
+var withinElement = require('within-element')
 
 /**
  * Get offset of an element within the viewport.
@@ -12,7 +12,7 @@ module.exports = function offset(el) {
   if (!doc) return
 
   // Make sure it's not a disconnected DOM node
-  if (!contains(el)) return box
+  if (!withinElement(el, doc)) return
 
   var body = doc.body
   if (body === el) {
