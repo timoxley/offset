@@ -1,4 +1,5 @@
 var support = require('dom-support')
+var getDocument = require('get-document')
 var withinElement = require('within-element')
 
 /**
@@ -8,7 +9,7 @@ var withinElement = require('within-element')
  */
 
 module.exports = function offset(el) {
-  var doc = el && el.ownerDocument
+  var doc = getDocument(el)
   if (!doc) return
 
   // Make sure it's not a disconnected DOM node

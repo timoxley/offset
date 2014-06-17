@@ -5,6 +5,7 @@
   "keywords": [],
   "dependencies": {
     "dom-support": "*",
+    "get-document": "0.1.0",
     "within-element": "0.1.0"
   },
   "component": {

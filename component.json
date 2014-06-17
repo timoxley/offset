@@ -6,6 +6,7 @@
   "keywords": [],
   "dependencies": {
     "detects/dom-support": "*",
+    "component/get-document": "0.1.0",
     "component/within-element": "0.1.0"
   },
   "development": {},
