@@ -1,6 +1,6 @@
 {
   "name": "timoxley-offset",
-  "description": "Get offset of a dom element.",
+  "description": "Get offset of a DOM Element or Range within the viewport",
   "version": "0.0.3",
   "keywords": [],
   "dependencies": {

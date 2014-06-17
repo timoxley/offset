@@ -3,9 +3,11 @@ var getDocument = require('get-document')
 var withinElement = require('within-element')
 
 /**
- * Get offset of an element within the viewport.
+ * Get offset of a DOM Element or Range within the viewport.
  *
- * @api public
+ * @param {DOMElement|Range} el - the DOM element or Range instance to measure
+ * @return {Object} An object with `top` and `left` Number values
+ * @public
  */
 
 module.exports = function offset(el) {

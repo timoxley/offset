@@ -1,6 +1,6 @@
 # offset
 
-  Get offset of a dom element within the viewport.
+  Get offset of a DOM Element or Range within the viewport.
 
 ## Installation
 
