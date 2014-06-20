@@ -1,8 +1,8 @@
 {
   "name": "timoxley-offset",
   "description": "Get offset of a DOM Element or Range within the viewport",
-  "version": "0.0.3",
-  "keywords": [],
+  "version": "1.0.0",
+  "keywords": ["browser", "coordinates"],
   "dependencies": {
     "dom-support": "*",
     "get-document": "0.1.0",
