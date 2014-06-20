@@ -2,7 +2,7 @@
   "name": "offset",
   "repo": "timoxley/offset",
   "description": "Get offset of a DOM Element or Range within the viewport",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": ["coordinates"],
   "dependencies": {
     "detects/dom-support": "*",

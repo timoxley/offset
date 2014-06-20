@@ -1,8 +1,11 @@
 {
   "name": "timoxley-offset",
   "description": "Get offset of a DOM Element or Range within the viewport",
-  "version": "1.0.0",
-  "keywords": ["browser", "coordinates"],
+  "version": "1.0.1",
+  "keywords": [
+    "browser",
+    "coordinates"
+  ],
   "dependencies": {
     "dom-support": "*",
     "get-document": "0.1.0",
@@ -16,5 +19,15 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/timoxley/offset.git"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/timoxley/offset/issues"
+  },
+  "homepage": "https://github.com/timoxley/offset",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "author": "Tim Oxley",
+  "license": "MIT"
 }
