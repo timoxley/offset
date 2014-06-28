@@ -1,6 +1,6 @@
 # offset
 
-  Get offset of a DOM Element or Range within the viewport.
+  Get offset of a DOM Element or Range within the document.
 
 ## Installation
 
@@ -10,7 +10,8 @@
 
 ### offset(el)
 
-Get offset of an element within the viewport.
+Get offset of an element within the document (relative to the top left
+of the document).
 
 Example:
 
