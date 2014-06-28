@@ -1,10 +1,18 @@
-# offset
+# document-offset
 
-  Get offset of a DOM Element or Range within the document.
+Get offset of a DOM Element or Range within the document.
 
 ## Installation
 
-    $ component install timoxley/offset
+```
+$ npm install document-offset
+```
+
+### [component(1)](http://component.io):
+
+```
+$ component install timoxley/offset
+```
 
 ## API
 
@@ -16,12 +24,11 @@ of the document).
 Example:
 
 ```js
-var offset = require('offset')
+var offset = require('document-offset')
 var target = document.getElementById('target')
 console.log(offset(target))
 // => {top: 69, left: 108}
 ```
-
 
 ## Credit
 
@@ -29,4 +36,4 @@ Code adapted from jQuery.
 
 ## License
 
-  MIT
+MIT
