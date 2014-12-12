@@ -28,18 +28,21 @@
   <body>
     <div id="wrap">
       <div id="content">
+        welcome to the jungle
         <div id="target"></div>
     </div>
   </div>
   <script src="../../build/build.js"></script>
   <script>
-    var offset = require('offset')
     var target = document.getElementById('target')
     var content = document.getElementById('content')
     var wrap = document.getElementById('wrap')
     wrap.onscroll = function() {
-      console.log(offset(target))
+      console.log('scroll', offset(target))
     }
+    document.addEventListener('selectionchange', function (e) {
+      console.log('selectionchange', offset(window.getSelection().getRangeAt(0)));
+    });
   </script>
   </body>
 </html>
