@@ -1,7 +1,7 @@
 {
   "name": "document-offset",
   "description": "Get offset of a DOM Element or Range within the document",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "keywords": [
     "browser",
     "coordinates"
