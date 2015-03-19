@@ -3,12 +3,16 @@
   <head>
     <style>
       body {
-
+        font-family: sans-serif;
       }
       #wrap {
         width: 600px;
-        height: 800px;
+        height: 600px;
         overflow: auto;
+        outline: 1px solid salmon;
+      }
+      #result {
+        padding: 2em 1em;
       }
 
       #content {
@@ -26,23 +30,28 @@
     </style>
   </head>
   <body>
+    <div id="result"></div>
     <div id="wrap">
       <div id="content">
         welcome to the jungle
         <div id="target"></div>
     </div>
   </div>
-  <script src="../../build/build.js"></script>
+  <script src="../build/build.js"></script>
   <script>
+    var offset = require('offset')
     var target = document.getElementById('target')
     var content = document.getElementById('content')
     var wrap = document.getElementById('wrap')
+    var result = document.getElementById('result')
     wrap.onscroll = function() {
-      console.log('scroll', offset(target))
+      var offsetResult = offset(target)
+      result.innerText = 'red square is at top:' + offsetResult.top + 'px left:' + offsetResult.left + 'px relative to *document*.'
     }
     document.addEventListener('selectionchange', function (e) {
       console.log('selectionchange', offset(window.getSelection().getRangeAt(0)));
     });
+    wrap.onscroll()
   </script>
   </body>
 </html>

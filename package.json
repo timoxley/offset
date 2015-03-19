@@ -8,8 +8,11 @@
   ],
   "dependencies": {
     "dom-support": "*",
-    "get-document": "0.1.0",
+    "get-document": "1.0.0",
     "within-element": "0.1.0"
+  },
+  "scripts": {
+    "start": "make && echo 'Example at: http://localhost:8080/example/' && http-server"
   },
   "component": {
     "scripts": {
@@ -30,5 +33,9 @@
     "example": "example"
   },
   "author": "Tim Oxley",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "component": "^1.1.0",
+    "http-server": "^0.8.0"
+  }
 }
